@@ -9,19 +9,6 @@
 
 }
 
-.list-row:hover{
-    background-color: var(--darkgrey);
-    border: 1px solid var(--green);
-    transition: all 0.3s;
-} 
-
-.list-row-red:hover{
-    background-color: var(--darkgrey);
-    border: 1px solid var(--red);
-    transition: all 0.3s;
-}
-
-
 
 .list-row td{
     text-align: left;

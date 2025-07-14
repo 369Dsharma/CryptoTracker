@@ -2,10 +2,13 @@ import React from 'react'
 import './styles.css'
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
+import { Link } from 'react-router-dom';
 
 const Grid = ({coin}) => {
   return (
-    <div className={`grid-container ${
+   <Link to={`/coin/${coin.id}`}>
+
+       <div className={`grid-container ${
         coin.price_change_perbcentage_24h < 0 && "grid-container-red"
     }`}>
 
@@ -69,6 +72,9 @@ const Grid = ({coin}) => {
       </div>
 
     </div>
+   
+   
+   </Link>
   )
 }
 
