@@ -6,6 +6,7 @@ import Search from '../components/Dashboard/Search'
 import PaginationControlled from '../components/Dashboard/Pagination'
 import Loader from '../components/Common/Loader'
 import BackToTop from '../components/Common/BackToTop'
+import Footer from '../components/Common/Footer'
 const DashboardPage = () => {
 
   const [ coins , setCoins] = useState([]);
@@ -77,6 +78,7 @@ const DashboardPage = () => {
           )}
         </>
       )}
+      <Footer />
     </div>
   )
 }
