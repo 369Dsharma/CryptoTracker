@@ -2,7 +2,7 @@ import './styles.css'
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
 import Tooltip from '@mui/material/Tooltip';
-import { convertNumbers } from '../../../functions/convertNumbers';
+import { convertNumbers } from '../../../functions/convertNumbers.jsx';
 import { Link } from 'react-router-dom';
 
 const List = ({coin}) => {

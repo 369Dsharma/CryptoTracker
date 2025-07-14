@@ -5,8 +5,8 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import './styles.css'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Grid from '../Grid';
-import List from '../List';
+import Grid from '../Grid/index.jsx';
+import List from '../List/index.jsx';
 
 
 export default function TabsComponent({coins}) {

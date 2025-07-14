@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './styles.css'
+import './styles.css' 
 const CoinInfo = ({heading , desc}) => {
     const shortDesc = desc.slice(0,200) + "<p style='color:var(--grey)'> Read More... </p>";
     const longDesc = desc + "<p style='color:var(--grey)'> Read Less... </p>";

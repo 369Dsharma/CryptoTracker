@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
-import AnchorTemporaryDrawer from './drawer'
-import Button from '../Button'
+import AnchorTemporaryDrawer from './drawer.jsx'
+import Button from '../../Common/Button/index.jsx'  
 import {Link} from "react-router-dom"
 
 function Header() {

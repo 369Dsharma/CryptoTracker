@@ -1,8 +1,8 @@
 import './App.css';
 import {BrowserRouter , Route, Routes} from "react-router-dom"
-import HomePage from './pages/Home';
-import DashboardPage from './pages/Dashboard';
-import CoinPage from './pages/Coin';
+import HomePage from './pages/Home.jsx';
+import DashboardPage from './pages/Dashboard.jsx';
+import CoinPage from './pages/Coin.jsx';
 
 function App() {
   return (

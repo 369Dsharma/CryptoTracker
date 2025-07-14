@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../components/Common/Header'
-import TabsComponent from '../components/Dashboard/Tabs'
+import Header from '../components/Common/Header/index.jsx'
+import TabsComponent from '../components/Dashboard/Tabs/index.jsx'
 import axios from "axios"
-import Search from '../components/Dashboard/Search'
-import PaginationControlled from '../components/Dashboard/Pagination'
-import Loader from '../components/Common/Loader'
-import BackToTop from '../components/Common/BackToTop'
-import Footer from '../components/Common/Footer'
+import Search from '../components/Dashboard/Search/index.jsx'
+import PaginationControlled from '../components/Dashboard/Pagination/index.jsx'
+import Loader from '../components/Common/Loader/index.jsx'
+import BackToTop from '../components/Common/BackToTop/index.jsx'
+import Footer from '../components/Common/Footer/index.jsx'
 const DashboardPage = () => {
 
   const [ coins , setCoins] = useState([]);
