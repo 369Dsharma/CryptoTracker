@@ -1,146 +1,121 @@
-.grid-container{
-     width: 300px;
-     background-color: var(--darkgrey);
-     border: 2px solid var(--darkgrey);
-     border-radius: 0.75rem;
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 250px;
+  padding: 2rem;
+  background-color: var(--darkgrey);
+  border-radius: 0.8rem;
+  border: 2px solid var(--darkgrey);
+  cursor: pointer;
 }
 
-.grid-container:hover{
-     border-color: var(--green);
-     transition: all 0.3s;
-     transform: scale(1.05);
+.grid:hover {
+  border: 2px solid var(--green);
+  transition: all 0.3s;
 }
 
-.grid-container-red:hover{
-     border-color:var(--red) !important;
-     transition: all 0.3s;
+.grid-red:hover {
+  border: 2px solid var(--red);
+  transition: all 0.3s;
 }
 
-.info-flex{
-     display: flex;
-     justify-content: flex-start;
-     align-items: center;
-     gap: 1.5rem;
-     margin: 1.5rem;
-     
+.img-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 
-.coin-logo{
-     height: 3.5rem;
-     width: 3.5rem;
-}
-
-.name-col{
-     display: flex;
-     flex-direction: column;
-     gap: 0.5rem;
-}
-
-.coin-symbol{
-     color: var(--white);
-     text-transform: uppercase;
-     font-weight: 600;
-     font-size: 1.2rem;
-     margin: 0;
-}
-
-.coin-name{
-     color: var(--grey);
-     text-transform: capitalize;
-     font-weight: light;
-     font-size: 0.9rem;
-     margin: 0;
-}
-
-.price-change{
-     display: flex;
-     justify-content: flex-start;
-     align-items: center;
-     gap: 1rem;
-     margin: 1rem 1.5rem;
-     margin-top: -10px;
-     
-}
-
-.coin-price-green{
-     border: 2px solid var(--green);
-     border-radius: 2rem;
-     padding: 0.35rem 1.25rem;
-     font-weight: 600;
-     font-size: 1rem;
-     text-align: center;
-     color: var(--green);
-     min-width: 64px;
-}
-
-.coin-price-green:hover , .trending-icon-green:hover{
-     background-color: var(--green);
-     color: var(--black);
-     transition: all 0.3s;
-}
-
-.coin-price-red{
-     border: 2px solid var(--red);
-     border-radius: 2rem;
-     padding: 0.35rem 1.25rem;
-     font-weight: 600;
-     font-size: 1rem;
-     text-align: center;
-     color: var(--red);
-     min-width: 64px;
-}
-
-.coin-price-red:hover , .trending-icon-red:hover{
-     background-color: var(--red);
-     color: var(--white);
-     transition: all 0.3s;
-}
-
-.trending-icon-green{
-     border: 2px solid var(--green);
-     border-radius: 50%;
-     height: 2rem !important;
-     width: 2rem !important;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     color: var(--green);
-     font-size: 1rem;
+.icon-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
-.trending-icon-red{
-     border: 2px solid var(--red);
-     border-radius: 50%;
-     height: 2rem;
-     width: 2rem;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     color: var(--red);
-     font-size: 1rem;
+.coin-image {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
 }
 
-
-.info-container{
-     margin: 1.5rem;
-     margin-top: -5px;
+.info-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.2rem;
 }
 
-.coin-current-price{
-     color: var(--green);
-     font-size: 1.2rem;
-     font-weight: 600;
+.coin-symbol {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0rem;
 }
 
-.total_volume{
-      color: var(--grey);
-      font-size: 0.8rem;
-      font-weight: 500;
+.coin-name {
+  margin: 0;
+  font-weight: 400;
+  color: var(--grey);
+  font-size: 0.8rem;
 }
 
-.market_cap{
-      color: var(--grey);
-      font-size: 0.8rem;
-      font-weight: 500;
+.coin-color{
+     color: var(--white) !important;
+}
+
+.chip-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.price-chip {
+  border: 2px solid var(--green);
+  border-radius: 2rem;
+  padding: 0.25rem 1rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.price-chip:hover,
+.chip-icon:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.chip-icon {
+  border: 2px solid var(--green);
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--green);
+}
+
+.red {
+  border: 2px solid var(--red) !important;
+  color: var(--red);
+}
+
+.red:hover {
+  background-color: var(--red) !important;
+  color: var(--white) !important;
+  transition: all 0.3s;
+}
+
+.current-price,
+.current-price-red {
+  color: var(--green);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.current-price-red {
+  color: var(--red) !important;
 }

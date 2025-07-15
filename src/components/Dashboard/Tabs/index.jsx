@@ -63,7 +63,7 @@ export default function TabsComponent({coins}) {
         </TabPanel>
         
         <TabPanel value="list">
-          <table className='list-table'>
+          <table className='list-flex'>
             {coins.map((coin, i)=>{
               return (
 

@@ -7,18 +7,15 @@
     margin: 1.5rem 2rem;
 }
 
-.list-table{
-    width: 85%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.list-flex {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media only screen and (max-width : 1200px)
-{
-    .list-table{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -2rem;
-    }
+
+@media only screen and (max-width: 600px) {
+  .list-flex {
+    width: 100%;
+  }
 }
