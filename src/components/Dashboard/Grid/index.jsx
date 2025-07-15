@@ -9,7 +9,7 @@ const Grid = ({coin}) => {
    <Link to={`/coin/${coin.id}`}>
 
        <div className={`grid-container ${
-        coin.price_change_perbcentage_24h < 0 && "grid-container-red"
+        coin.price_change_percentage_24h < 0 && "grid-container-red"
     }`}>
 
       

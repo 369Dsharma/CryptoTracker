@@ -16,6 +16,9 @@
 @media only screen and (max-width : 1200px)
 {
     .list-table{
-        width: 95%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -2rem;
     }
 }

@@ -78,4 +78,36 @@
     }
 }
 
+@media only screen and (max-width : 700px){
 
+
+    
+.list-row {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.2rem;
+    border: 2px solid white;
+    border-radius: 30px;
+    max-width: 60%;
+}
+
+
+.td-image{
+    max-width: 1.5rem;
+}
+.coin-logo{
+    height: 3rem;
+    width: 3rem;
+}
+
+.volume_td{
+    margin-top: -2rem;
+}
+
+.market_td{
+    margin-top: -2rem;
+}
+
+
+}
