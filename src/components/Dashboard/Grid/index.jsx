@@ -5,11 +5,15 @@ import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
 import { Link } from 'react-router-dom';
 
 const Grid = ({coin}) => {
+  const priceChange = coin.price_change_percentage_24h ?? 0;
+  const currentPrice = coin.current_price ?? 0;
+  const totalVolume = coin.total_volume ?? 0;
+  const marketCap = coin.market_cap ?? 0;
   return (
    <Link to={`/coin/${coin.id}`}>
 
      <div
-        className={`grid ${coin.price_change_percentage_24h < 0 && "grid-red"}`}
+        className={`grid ${priceChange < 0 && "grid-red"}`}
       >
         <div className="img-flex">
           <img src={coin.image} className="coin-image" />
@@ -21,10 +25,10 @@ const Grid = ({coin}) => {
            
           </div>
         </div>
-        {coin.price_change_percentage_24h >= 0 ? (
+        {priceChange >= 0 ? (
           <div className="chip-flex">
             <div className="price-chip">
-              {coin.price_change_percentage_24h.toFixed(2)}%
+              {priceChange.toFixed(2)}%
             </div>
             <div className="chip-icon">
               <TrendingUpRoundedIcon />
@@ -33,27 +37,27 @@ const Grid = ({coin}) => {
         ) : (
           <div className="chip-flex">
             <div className="price-chip red">
-              {coin.price_change_percentage_24h.toFixed(2)}%
+              {priceChange.toFixed(2)}%
             </div>
             <div className="chip-icon red">
               <TrendingDownRoundedIcon />
             </div>
           </div>
         )}
-        {coin.price_change_percentage_24h >= 0 ? (
+        {priceChange >= 0 ? (
           <p className="current-price">
-            ${coin.current_price.toLocaleString()}
+            ${currentPrice.toLocaleString()}
           </p>
         ) : (
           <p className="current-price-red">
-            ${coin.current_price.toLocaleString()}
+            ${currentPrice.toLocaleString()}
           </p>
         )}
         <p className="coin-name coin-color">
-          Total Volume : {coin.total_volume.toLocaleString()}
+          Total Volume : {totalVolume.toLocaleString()}
         </p>
         <p className="coin-name coin-color">
-          Market Capital : ${coin.market_cap.toLocaleString()}
+          Market Capital : ${marketCap.toLocaleString()}
         </p>
       </div>
    

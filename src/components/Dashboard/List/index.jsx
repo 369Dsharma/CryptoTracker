@@ -6,6 +6,10 @@ import { convertNumbers } from '../../../functions/convertNumbers.jsx';
 import { Link } from 'react-router-dom';
 
 const List = ({coin}) => {
+  const priceChange = coin.price_change_percentage_24h ?? 0;
+  const currentPrice = coin.current_price ?? 0;
+  const totalVolume = coin.total_volume ?? 0;
+  const marketCap = coin.market_cap ?? 0;
   return (
     <Link to={`/coin/${coin.id}`} >
      <tr className="list-row" >
@@ -26,11 +30,11 @@ const List = ({coin}) => {
           title="Coin Price Percentage In 24hrs"
           placement="bottom-start"
         >
-          {coin.price_change_percentage_24h >= 0 ? (
+          {priceChange >= 0 ? (
             <td>
               <div className="chip-flex">
                 <div className="price-chip">
-                  {coin.price_change_percentage_24h.toFixed(2)}%
+                  {priceChange.toFixed(2)}%
                 </div>
                 <div className="chip-icon td-chip-icon">
                   <TrendingUpRoundedIcon />
@@ -41,7 +45,7 @@ const List = ({coin}) => {
             <td>
               <div className="chip-flex">
                 <div className="price-chip red">
-                  {coin.price_change_percentage_24h.toFixed(2)}%
+                  {priceChange.toFixed(2)}%
                 </div>
                 <div className="chip-icon td-chip-icon red">
                   <TrendingDownRoundedIcon />
@@ -51,27 +55,27 @@ const List = ({coin}) => {
           )}
         </Tooltip>
         <Tooltip title="Coin Price In USD" placement="bottom-end">
-          {coin.price_change_percentage_24h >= 0 ? (
+          {priceChange >= 0 ? (
             <td className="current-price  td-current-price">
-              ${coin.current_price.toLocaleString()}
+              ${currentPrice.toLocaleString()}
             </td>
           ) : (
             <td className="current-price-red td-current-price">
-              ${coin.current_price.toLocaleString()}
+              ${currentPrice.toLocaleString()}
             </td>
           )}
         </Tooltip>
         <Tooltip title="Coin Total Volume" placement="bottom-end">
           <td className="coin-name td-totalVolume">
-            {coin.total_volume.toLocaleString()}
+            {totalVolume.toLocaleString()}
           </td>
         </Tooltip>
         <Tooltip title="Coin Market Capital" placement="bottom-end">
           <td className="coin-name td-marketCap">
-            ${coin.market_cap.toLocaleString()}
+            ${marketCap.toLocaleString()}
           </td>
         </Tooltip>
-        <td className="coin-name mobile">${convertNumbers(coin.market_cap)}</td>
+        <td className="coin-name mobile">${convertNumbers(marketCap)}</td>
 
     </tr>
 
